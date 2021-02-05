@@ -44,4 +44,9 @@ resource "azurerm_app_service" "this" {
   site_config {
     linux_fx_version = "NODE|14-lts"
   }
+
+  source_control {
+    repo_url           = "https://github.com/Eliacus/cloud-lecture"
+    branch             = "master"
+  }
 }
